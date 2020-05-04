@@ -1,4 +1,4 @@
-console.log('javascript file loaded');
+
 
 fetch('http://puzzle.mead.io/puzzle').then((response) => {
     response.json().then((data) => {
@@ -23,8 +23,8 @@ weatherForm.addEventListener('submit',(e)=>{
     fetch('http://localhost:3000/weather?address='+location).then((response)=>{
     response.json().then((data) =>{
         if(data.error){
-            messageOne.textContent=''
-            messageTwo.textContent=data.error   
+            messageOne.textContent=data.error
+             
         }else{
             messageOne.textContent=data.location
             messageTwo.textContent=data.forecast   
